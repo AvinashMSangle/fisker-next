@@ -2,13 +2,14 @@ import Image from "next/image";
 
 function Header() {
   return (
-    <div className="flex flex-col  h-screen">
-      <p className="text-1xl text-center font-semibold py-2">
-        All electric &#xb7; Dynamic &#xb7; Driver Range{" "}
-      </p>
-      {/* <h1 className="text-6xl font-bold">Fisker Ocean</h1> */}
-
-      <header className="flex flex-col ">
+    <div className="text-stone-900">
+      {/* HEADER */}
+      <div className="bg-stone-100">
+        <p className="text-1xl text-center font-semibold py-2">
+          All electric &#xb7; Dynamic &#xb7; Driver Range
+        </p>
+      </div>
+      <header className="flex justify-between px-10 py-3">
         <Image
           src="fisker.svg"
           alt="fisker-logo"
@@ -16,10 +17,11 @@ function Header() {
           width={100}
           className="w-12 sm:w-16 h-auto cursor-pointer hover:scale-110 transition-transform duration-100"
         />
-        <span>
+        {/* REGION */}
+        <a href="#" className="flex gap-2 items-center">
           <Image src="globe.svg" alt="globe-logo" height={20} width={20} />
           <p className="text-sm sm:text-base"></p>
-        </span>
+        </a>
       </header>
     </div>
   );

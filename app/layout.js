@@ -2,7 +2,7 @@ import './global.css'
 
 export const metadata = {
   title: 'Fisker Ocean',
-  description: 'Configuration for Fisker Ocean',
+  description: 'Configur your Fisker Ocean',
   keywords: 'fisker, ocean,nextjs,tailwind,configautor',
 }
 
