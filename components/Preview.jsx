@@ -3,7 +3,7 @@ import Image from "next/image";
 function Preview() {
   return (
     <>
-      {/* Exterior Image */}
+      {/* EXTERIOR IMAGE*/}
       <Image
         src={"/images/fiskerCar.jpg"}
         width="0"
@@ -12,7 +12,7 @@ function Preview() {
         className="w-full h-auto rounded-lg"
         alt="Aerostealth"
       />
-      {/* Description */}
+      {/* DESCCRIPTION */}
       <div className="py-3">
         <h3 className="font-bold text-xl text-blue-950">Metallic Gloss</h3>
         <p>A mysterious, seductive black with a metallic blue shimmer.</p>
@@ -27,7 +27,7 @@ function Preview() {
         className="w-full h-auto rounded-lg"
         alt="Aerostealth"
       />
-      <p className="uppercase font-semibold text-stone-900 py-3">
+      <p className="uppercase font-semibold text-stone-950 py-3">
         Interior Image
       </p>
     </>

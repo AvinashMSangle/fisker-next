@@ -3,7 +3,7 @@
 function Configurator() {
   return (
     <div>
-      {/* Headings */}
+      {/* HEADINGS */}
       <h1 className="text-2xl md:text-4xl font-semibold text-blue-950">
         Fisker Ocean
       </h1>
@@ -12,7 +12,7 @@ function Configurator() {
         interior and 3 wheels options.
       </p>
 
-      {/* Exterior Colors */}
+      {/* EXTERIOR COLORS */}
       <div className="my-3">
         <h3 className="font-bold uppercase mb-3">Exterior Color</h3>
         <div className="flex gap-2">
@@ -20,7 +20,7 @@ function Configurator() {
             <button
               key={index}
               onClick={() => console.log("Exterior Clicked")}
-              className="hover:scale-105 transition-transform duration-100  border-2 border-blue-950 rounded-full"
+              className={`hover:scale-105 transition-transform duration-100 ${index === 0 ? "border-b-2 border-blue-300 rounded full" : ""}`}
             >
               <img
                 src="images/black_pearl.png"
@@ -32,7 +32,7 @@ function Configurator() {
         </div>
       </div>
 
-      {/* Interior Colors */}
+      {/* INTERIOR COLORS */}
       <div className="my-12">
         <h3 className="font-bold uppercase mb-3">Interior Color</h3>
         <div className="flex gap-2">
@@ -40,10 +40,10 @@ function Configurator() {
             <button
               key={index}
               onClick={() => console.log("Exterior Clicked")}
-              className="hover:scale-105 transition-transform duration-100"
+              className={`hover:scale-105 transition-transform duration-100 ${index === 0 ? "border-b-2 border-blue-300 rounded full" : ""}`}
             >
               <img
-                src="https://fisker-ocean.vercel.app/swatch/interior/dark.png"
+                src="images/black_pearl.png"
                 alt="Black Pearl"
                 className="w-12"
               />
@@ -52,7 +52,7 @@ function Configurator() {
         </div>
       </div>
 
-      {/* Wheel Options */}
+      {/* WHELL OPTIONS */}
       <div className="my-3">
         <h3 className="font-bold uppercase mb-3">Wheel Options</h3>
         <div className="flex gap-2">
@@ -60,10 +60,10 @@ function Configurator() {
             <button
               key={index}
               onClick={() => console.log("Exterior Clicked")}
-              className={`hover:scale-105 transition-transform duration-100`}
+              className={`hover:scale-105 transition-transform duration-100 ${index === 0 ? "border-b-2 border-blue-300 rounded full" : ""}`}
             >
               <img
-                src="/images/wheel.webp"
+                src="images/wheel.webp"
                 alt="Black Pearl"
                 className="w-12"
               />
