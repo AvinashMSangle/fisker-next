@@ -5,7 +5,7 @@ console.log(configs);
 
 function Preview({
    color = "Black Pearl",
-   interior = "dark",
+   interior = "light",
    wheel="SlipStream Black"
 }) {
 

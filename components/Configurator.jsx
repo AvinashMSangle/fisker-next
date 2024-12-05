@@ -1,6 +1,70 @@
-"use client";
+function Configurator({ updateOptions}) {
+const exteriorSwatch = [
+  {
+    id:0,
+    name:"Black Pearl",
+    src:"/swatch/black_pearl.png"
+  },
+  {
+    id:1,
+    name:"Red Planet",
+    src:"/swatch/red_planet.png"
+  },
+  {
+    id:2,
+    name:"Sea Grass",
+    src:"/swatch/sea_grass.png"
+  },
+  {
+    id:3,
+    name:"Sun Soaked",
+    src:"/swatch/sun_soaked.png"
+    
+  },
+  {
+    id:4,
+    name:"Stealth Green",
+    src:"/swatch/stealth_green.png"
+  },
+  {
+    id:5,
+    name:"Blue Planet",
+    src:"/swatch/blue_planet.png"
+  },
+]
 
-function Configurator() {
+
+const interiorSwatch = [
+  {
+    id:0,
+    name:"dark",
+    src:"/swatch/interior/dark.png"
+  },
+  {
+    id:1,
+    name:"light",
+    src:"/swatch/interior/light.png"
+  }
+]
+
+const wheelsOption= [
+  {
+    id:0,
+    name:"SlipStream Black",
+    src:"/wheels/slipstream_black.webp"
+  },
+  {
+    id:1,
+    name:"AeroStealth",
+    src:"/wheels/aerostealth.webp"
+  },
+  {
+    id:2,
+    name:"Vortex",
+    src:"/wheels/vortex.webp"
+  }
+]
+
   return (
     <div>
       {/* HEADINGS */}
@@ -16,14 +80,14 @@ function Configurator() {
       <div className="my-3">
         <h3 className="font-bold uppercase mb-3">Exterior Color</h3>
         <div className="flex gap-2">
-          {new Array(6).fill(1).map((_, index) => (
+          {exteriorSwatch.map((color) => (
             <button
-              key={index}
-              onClick={() => console.log("Exterior Clicked")}
-              className={`hover:scale-105 transition-transform duration-100 ${index === 0 ? "border-b-2 border-blue-300 rounded full" : ""}`}
+              key={color.id}
+              onClick={() => updateOptions("color",color.name)}
+              className={`hover:scale-105 transition-transform duration-100 ${color.id === 0 ? "border-b-2 border-blue-300 rounded full" : ""}`}
             >
               <img
-                src="images/black_pearl.png"
+                src={color.src}
                 alt="Black Pearl"
                 className="w-12"
               />
@@ -36,14 +100,14 @@ function Configurator() {
       <div className="my-12">
         <h3 className="font-bold uppercase mb-3">Interior Color</h3>
         <div className="flex gap-2">
-          {new Array(2).fill(1).map((_, index) => (
+          {interiorSwatch.map((color) => (
             <button
-              key={index}
-              onClick={() => console.log("Exterior Clicked")}
-              className={`hover:scale-105 transition-transform duration-100 ${index === 0 ? "border-b-2 border-blue-300 rounded full" : ""}`}
+              key={color.id}
+              onClick={() => updateOptions("interior",color.name)}
+              className={`hover:scale-105 transition-transform duration-100 ${color.id === 0 ? "border-b-2 border-blue-300 rounded full" : ""}`}
             >
               <img
-                src="images/black_pearl.png"
+                src={color.src}
                 alt="Black Pearl"
                 className="w-12"
               />
@@ -56,14 +120,14 @@ function Configurator() {
       <div className="my-3">
         <h3 className="font-bold uppercase mb-3">Wheel Options</h3>
         <div className="flex gap-2">
-          {new Array(3).fill(1).map((_, index) => (
+          {wheelsOption.map((wheel) => (
             <button
-              key={index}
-              onClick={() => console.log("Exterior Clicked")}
-              className={`hover:scale-105 transition-transform duration-100 ${index === 0 ? "border-b-2 border-blue-300 rounded full" : ""}`}
+              key={wheel.id}
+              onClick={() => updateOptions("wheel",wheel.name)}
+              className={`hover:scale-105 transition-transform duration-100 ${wheel.id === 0 ? "border-b-2 border-blue-300 rounded full" : ""}`}
             >
               <img
-                src="images/wheel.webp"
+                src={wheel.src}
                 alt="Black Pearl"
                 className="w-12"
               />
